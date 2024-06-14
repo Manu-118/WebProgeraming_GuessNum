@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('starrynight.gif') repeat;
+    background-size: cover;
+    animation: backgroundAnimation 10s linear infinite;
+    color: white;
+}
+
+@keyframes backgroundAnimation {
+    from {background-position: 0 0;}
+    to {background-position: 100% 100%;}
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.game {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-game {
+    flex: 1;
+}
+
+.tally-board {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+input, button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    input, button {
+        font-size: 14px;
+    }
+
+    .game {
+        flex-direction: column;
+    }
+
+    .tally-board {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    input, button {
+        font-size: 12px;
+    }
+}
+
+.highlight {
+    color: yellow;
+    font-weight: bold;
+}

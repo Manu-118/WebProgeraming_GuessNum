@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number - Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game">
+            <div class="main-game">
+                <h1>Guess the Number</h1>
+                <p id="playerGreeting"></p>
+                <p id="turnIndicator"></p>
+                <p>Guess a number between <span id="lowerBound">1</span> and <span id="upperBound">100</span>:</p>
+                <input type="number" id="guessInput" min="1" max="100" required>
+                <button id="submitGuess">Submit Guess</button>
+                <p id="feedback"></p>
+            </div>
+            <div class="tally-board">
+                <h2>Tally Board</h2>
+                <div id="player1Tally">
+                    <h3 id="player1NameTally">Player 1</h3>
+                    <ul id="player1Guesses"></ul>
+                    <p>Total Guesses: <span id="player1GuessCount">0</span></p>
+                </div>
+                <div id="player2Tally">
+                    <h3 id="player2NameTally">Player 2</h3>
+                    <ul id="player2Guesses"></ul>
+                    <p>Total Guesses: <span id="player2GuessCount">0</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

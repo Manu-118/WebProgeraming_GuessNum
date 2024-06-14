@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number - Victory</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="winnerBanner">Winner!</h1>
+        <p id="winnerName"></p>
+        <button onclick="window.location.href='index.html'">Play Again</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const winnerName = localStorage.getItem('winnerName');
+            const winnerGuesses = localStorage.getItem('winnerGuesses');
+            document.getElementById('winnerName').textContent = `Congratulations, ${winnerName}! You guessed the number in ${winnerGuesses} guesses.`;
+        });
+    </script>
+</body>
+</html>
